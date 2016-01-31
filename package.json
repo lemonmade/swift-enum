@@ -1,7 +1,7 @@
 {
   "name": "swift-enum",
   "version": "0.0.1",
-  "description": "A simple enum implementation inspired by Swift.",
+  "description": "A Swift-inspired enum implementation for JavaScript.",
   "main": "lib/index.js",
   "esnext:main": "src/index.js",
   "directories": {
