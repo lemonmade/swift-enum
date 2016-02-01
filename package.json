@@ -41,6 +41,10 @@
     "postversion": "git push && git push --tags && npm run clean",
     "prepublish": "npm run clean && npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lemonmade/swift-enum.git"
+  },
   "author": "Chris Sauve <chrismsauve@gmail.com>",
   "license": "MIT"
 }
