@@ -12,7 +12,7 @@ export default class Enum {
       return this;
     }
 
-    cases.forEach(::this.caseWithRawValue);
+    cases.forEach((aCase) => this.caseWithRawValue(aCase));
     return this;
   }
 

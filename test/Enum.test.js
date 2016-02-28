@@ -42,6 +42,11 @@ describe(Enum.name, () => {
       expect(Color).to.have.property('Blue');
       expect(Color).to.have.property('Red');
     });
+
+    it('respects the string type when multiple cases provided', () => {
+      Color.case('Blue', 'Red');
+      expect(Color.Red.rawValue).to.equal('Red');
+    });
   });
 
   describe('.freeze()', () => {
