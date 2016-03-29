@@ -3,28 +3,7 @@
   "version": "1.0.2",
   "description": "A Swift-inspired enum implementation for JavaScript.",
   "main": "lib/index.js",
-  "esnext:main": "src/index.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "babel-cli": "^6.4.5",
-    "babel-core": "^6.4.5",
-    "babel-eslint": "^4.1.6",
-    "babel-loader": "^6.2.1",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-stage-0": "^6.3.13",
-    "chai": "^3.5.0",
-    "coveralls": "^2.11.6",
-    "eslint": "^1.10.3",
-    "eslint-config-shopify": "^5.9.0",
-    "eslint-plugin-shopify": "^2.1.0",
-    "isparta": "^4.0.0",
-    "mocha": "^2.4.5",
-    "rimraf": "^2.5.1",
-    "webpack": "^1.12.12"
-  },
+  "jsnext:main": "src/index.js",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "test": "mocha test/ --recursive --compilers js:babel-core/register --reporter spec",
@@ -33,8 +12,8 @@
     "check": "npm run lint && npm run test",
     "clean": "rimraf lib dist coverage",
     "build:lib": "babel src --out-dir lib",
-    "build:umd": "webpack src/index.js dist/swift-enum.js --config webpack.config.development.babel.js",
-    "build:umd:min": "webpack src/index.js dist/swift-enum.min.js --config webpack.config.production.babel.js",
+    "build:umd": "webpack src/index.js dist/swift-enum.js --config config/webpack.config.development.babel.js",
+    "build:umd:min": "webpack src/index.js dist/swift-enum.min.js --config config/webpack.config.production.babel.js",
     "build": "npm run clean && npm run build:lib && npm run build:umd && npm run build:umd:min",
     "preversion": "npm run clean && npm run check",
     "version": "npm run build",
@@ -46,5 +25,26 @@
     "url": "git://github.com/lemonmade/swift-enum.git"
   },
   "author": "Chris Sauve <chrismsauve@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "babel": {
+    "presets": ["shopify"]
+  },
+  "eslintConfig": {
+    "extends": "plugin:shopify/esnext"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.7.4",
+    "babel-eslint": "^6.0.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-shopify": "^10.1.0",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "eslint": "^2.5.3",
+    "eslint-plugin-shopify": "^10.8.0",
+    "isparta": "^4.0.0",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.12.14"
+  }
 }

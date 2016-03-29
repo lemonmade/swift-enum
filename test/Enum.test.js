@@ -82,10 +82,10 @@ describe(Enum.name, () => {
 
   describe('[Symbol.iterator]()', () => {
     it('does not fail on an enum without cases', () => {
-      function doNothingWithColor() {}
+      function doNothingWithColor() {} // eslint-disable-line no-empty-function
 
       expect(() => {
-        for (let color of Color) { doNothingWithColor(color); }
+        for (const color of Color) { doNothingWithColor(color); }
       }).not.to.throw(Error);
     });
 
@@ -129,7 +129,7 @@ describe(Enum.name, () => {
     });
 
     it('uses a passed value in place of the default', () => {
-      let customValue = 'First day of the week';
+      const customValue = 'First day of the week';
       DayOfTheWeek.case({Monday: customValue});
       expect(DayOfTheWeek.Monday.rawValue).to.equal(customValue);
     });

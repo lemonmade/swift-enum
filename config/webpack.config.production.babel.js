@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import defaultConfig from './webpack.config.babel';
 
-let {
+const {
   optimize: {OccurenceOrderPlugin, UglifyJsPlugin},
   DefinePlugin,
 } = webpack;

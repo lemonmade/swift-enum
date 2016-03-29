@@ -17,7 +17,7 @@ export default class Enum {
   }
 
   static caseWithRawValue(name, rawValue) {
-    let newCase = new this(name, rawValue, INITIALIZING);
+    const newCase = new this(name, rawValue, INITIALIZING);
     this[name] = newCase;
     this.cases.push(newCase);
   }

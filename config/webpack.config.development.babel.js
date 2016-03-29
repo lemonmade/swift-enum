@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import defaultConfig from './webpack.config.babel';
 
-let {optimize: {OccurenceOrderPlugin}, DefinePlugin} = webpack;
+const {optimize: {OccurenceOrderPlugin}, DefinePlugin} = webpack;
 
 export default {
   ...defaultConfig,

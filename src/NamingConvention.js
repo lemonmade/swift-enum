@@ -9,12 +9,12 @@ export default class NamingConvention extends Enum {
     switch (this) {
     case NamingConvention.PascalCase: return /^[A-Z][a-zA-Z]*$/;
     case NamingConvention.ScreamingSnakeCase: return /^[A-Z][A-Z_]*$/;
-    case NamingConvention.NoRules: return /./;
+    default: return /./;
     }
   }
 
   get EnumClass() {
-    let namingConvention = this; // eslint-disable-line consistent-this
+    const namingConvention = this; // eslint-disable-line consistent-this
 
     return class CustomEnum extends Enum {
       static caseWithRawValue(name, rawValue) {
