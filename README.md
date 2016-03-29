@@ -185,8 +185,8 @@ The index file for this project also provides two named exports:
 [dependency-url]: https://david-dm.org/lemonmade/swift-enum
 [dependency-image]: https://david-dm.org/lemonmade/swift-enum.svg
 
-[devDependency-url]: https://david-dm.org/lemonmade/swift-enum
-[devDependency-image]: https://david-dm.org/lemonmade/swift-enum.svg
+[devDependency-url]: https://david-dm.org/lemonmade/swift-enum#info=devDependencies
+[devDependency-image]: https://david-dm.org/lemonmade/swift-enum/dev-status.svg
 
 [npm-url]: https://npmjs.org/package/swift-enum
 [npm-image]: http://img.shields.io/npm/v/swift-enum.svg?style=flat-square
